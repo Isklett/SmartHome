@@ -1,0 +1,14 @@
+I:\Lexicon\C# Projects\SmartHome\SmartHome\bin\Debug\net10.0\SmartHome.exe
+I:\Lexicon\C# Projects\SmartHome\SmartHome\bin\Debug\net10.0\SmartHome.deps.json
+I:\Lexicon\C# Projects\SmartHome\SmartHome\bin\Debug\net10.0\SmartHome.runtimeconfig.json
+I:\Lexicon\C# Projects\SmartHome\SmartHome\bin\Debug\net10.0\SmartHome.dll
+I:\Lexicon\C# Projects\SmartHome\SmartHome\bin\Debug\net10.0\SmartHome.pdb
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.GeneratedMSBuildEditorConfig.editorconfig
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.AssemblyInfoInputs.cache
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.AssemblyInfo.cs
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.csproj.CoreCompileInputs.cache
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.dll
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\refint\SmartHome.dll
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.pdb
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.genruntimeconfig.cache
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\ref\SmartHome.dll
