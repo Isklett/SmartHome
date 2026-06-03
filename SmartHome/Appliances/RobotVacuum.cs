@@ -1,10 +1,12 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace SmartHome.Appliances
 {
-    internal class RobotVacuum
+    internal class RobotVacuum : Appliance
     {
-        public string? Brand { get; set; }
-        public float BatteryLevel 
+        public float BatteryLevel
         {
             get;
             set
@@ -12,25 +14,27 @@ namespace SmartHome.Appliances
                 field = Math.Clamp(value, 0.0f, 100.0f);
             }
         }
-        public RobotVacuum(string brand, float batteryLevel)
+        public RobotVacuum(string brand, string room, float batteryLevel) : base(brand, room)
         {
-            Brand = brand;
             BatteryLevel = batteryLevel;
         }
-
-        public void StartCleaning()
+        public override string GetInfo()
         {
-            Console.WriteLine($"{Brand} robot vacuum starts cleaning");
+            return $"{base.GetInfo()} BatteryLevel: {BatteryLevel} %.";
         }
-
-        public void StopCleaning()
+        public override void TurnOn()
         {
-            Console.WriteLine($"{Brand} robot vacuum stops cleaning");
+            base.TurnOn();
+            Console.WriteLine($"{Brand} vacuum starts cleaning.");
         }
-
-        public void PrintCleaningEnergy()
+        public override void TurnOff()
         {
-            Console.WriteLine($"{Brand} robot vacuum uses 0.4 kWh per cleaning");
+            base.TurnOff();
+            Console.WriteLine($"{Brand} vacuum stops cleaning.");
+        }
+        public override double GetDailyEnergyUsage()
+        {
+            return 1.2; // kWh per wash
         }
     }
 }

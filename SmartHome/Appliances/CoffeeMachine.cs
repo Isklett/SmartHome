@@ -1,30 +1,34 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace SmartHome.Appliances
 {
-    internal class CoffeeMachine
+    internal class CoffeeMachine : Appliance
     {
-        public string Brand { get; set; }
-        public int CupsPerBrew { get; set; }
+        public float CupsPerBrew { get; set; }
 
-        public CoffeeMachine(string brand, int cupsPerBrew)
+        public CoffeeMachine(string brand, string room, float cupsPerBrew) : base(brand, room)
         {
-            Brand = brand;
             CupsPerBrew = cupsPerBrew;
         }
-
-        public void StartBrewing()
+        public override string GetInfo()
         {
-            Console.WriteLine($"The {Brand} coffee machine is brewing {CupsPerBrew} cups of coffee.");
+            return $"{base.GetInfo()} Cups per brew: {CupsPerBrew} cups.";
         }
-
-        public void StopBrewing()
+        public override void TurnOn()
         {
-            Console.WriteLine($"The {Brand} coffee machine has stopped brewing.");
+            base.TurnOn();
+            Console.WriteLine($"{Brand} coffee machine has started to brew.");
         }
-
-        public void PrintBrewingEnergy()
+        public override void TurnOff()
         {
-            Console.WriteLine($"The {Brand} coffee machine used {CupsPerBrew * 0.1} kWh of energy to brew.");
+            base.TurnOff();
+            Console.WriteLine($"{Brand} coffee machine has stopped brewing.");
+        }
+        public override double GetDailyEnergyUsage()
+        {
+            return 1.2; // kWh per wash
         }
     }
 }

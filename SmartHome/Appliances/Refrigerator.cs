@@ -1,31 +1,33 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace SmartHome.Appliances
 {
-    internal class Refrigerator
+    internal class Refrigerator : Appliance
     {
-        public string? Brand { get; set; }
         public float Temperature { get; set; }
-
-        public Refrigerator(string brand, float temperature)
+        public Refrigerator(string brand, string room, float temperature) : base(brand, room)
         {
-            Brand = brand;
             Temperature = temperature;
         }
-
-
-        public void StartCooling()
+        public override string GetInfo()
         {
-            Console.WriteLine($"{Brand} refrigerator starts cooling.");
+            return $"{base.GetInfo()} Temperature: {Temperature} degrees.";
         }
-
-        public void StopCooling() 
+        public override void TurnOn()
         {
-            Console.WriteLine($"{Brand} refrigerator stops cooling.");
+            base.TurnOn();
+            Console.WriteLine($"{Brand} refrigerator has turned on.");
         }
-
-        public void PrintCoolingEnergy()
+        public override void TurnOff()
         {
-            Console.WriteLine($"{Brand} refrigerator uses 3.6 kWh per day of cooling.");
+            base.TurnOff();
+            Console.WriteLine($"{Brand} refrigerator has turned off.");
+        }
+        public override double GetDailyEnergyUsage()
+        {
+            return 1.2; // kWh per wash
         }
     }
 }

@@ -1,30 +1,33 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace SmartHome.Appliances
 {
-    internal class Washer
+    internal class Washer : Appliance
     {
-        public string Brand { get; set; }
-        public float CapacityKg { get; set; }
-
-        public Washer(string brand, float capacityKg)
+        public float CapacityKg { get; }
+        public Washer(string brand, string room, float capacityKg) : base(brand, room)
         {
-            Brand = brand;
             CapacityKg = capacityKg;
         }
-
-        public void StartWash()
+        public override string GetInfo()
         {
-            Console.WriteLine($"{Brand} washer starts washing.");
+            return $"{base.GetInfo()} Capacity: {CapacityKg} kg.";
         }
-
-        public void StopWash()
+        public override void TurnOn()
         {
-            Console.WriteLine($"{Brand} washer stops washing.");
+            base.TurnOn();
+            Console.WriteLine($"{Brand} washing machine has started a program.");
         }
-
-        public void PrintWashEnergy()
+        public override void TurnOff()
         {
-            Console.WriteLine($"{Brand} washer uses 1.2 kWh per wash.");
+            base.TurnOff();
+            Console.WriteLine($"{Brand} washing machine has stopped a program.");
+        }
+        public override double GetDailyEnergyUsage()
+        {
+            return 1.2; // kWh per wash
         }
     }
 }

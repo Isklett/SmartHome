@@ -14,11 +14,11 @@ namespace SmartHome
             // Washer, Refrigerator, Oven och RobotVacuum.
             // Lägg till dem i listan devices.
 
-            Washer washer = new Washer("LG", 10.0f);
-            Refrigerator refrigerator = new Refrigerator("Samsung", 5.5f);
-            Oven oven = new Oven("Electrolux", 275.0f);
-            RobotVacuum robot = new RobotVacuum("Xiaomi", 100.0f);
-            CoffeeMachine coffeeMachine = new CoffeeMachine("Nespresso", 2);
+            Washer_old washer = new Washer_old("LG", 10.0f);
+            Refrigerator_old refrigerator = new Refrigerator_old("Samsung", 5.5f);
+            Oven_old oven = new Oven_old("Electrolux", 275.0f);
+            RobotVacuum_old robot = new RobotVacuum_old("Xiaomi", 100.0f);
+            CoffeeMachine_old coffeeMachine = new CoffeeMachine_old("Nespresso", 2);
 
             devices.Add(washer);
             devices.Add(refrigerator);
@@ -38,31 +38,31 @@ namespace SmartHome
                 // 2. Casta till rätt typ.
                 // 3. Anropa rätt startmetod.
                 // 4. Anropa rätt stoppmetod.
-                if (device is Washer)
+                if (device is Washer_old)
                 {
-                    ((Washer)device).StartWash();
-                    ((Washer)device).StopWash();
+                    ((Washer_old)device).StartWash();
+                    ((Washer_old)device).StopWash();
                 }
-                else if (device is Refrigerator)
+                else if (device is Refrigerator_old)
                 {
-                    ((Refrigerator)device).StartCooling();
-                    ((Refrigerator)device).StopCooling();
+                    ((Refrigerator_old)device).StartCooling();
+                    ((Refrigerator_old)device).StopCooling();
 
                 }
-                else if (device is Oven)
+                else if (device is Oven_old)
                 {
-                    ((Oven)device).StartHeating();
-                    ((Oven)device).StopHeating();
+                    ((Oven_old)device).StartHeating();
+                    ((Oven_old)device).StopHeating();
                 }
-                else if (device is RobotVacuum)
+                else if (device is RobotVacuum_old)
                 {
-                    ((RobotVacuum)device).StartCleaning();
-                    ((RobotVacuum)device).StopCleaning();
+                    ((RobotVacuum_old)device).StartCleaning();
+                    ((RobotVacuum_old)device).StopCleaning();
                 }
-                else if (device is CoffeeMachine)
+                else if (device is CoffeeMachine_old)
                 {
-                    ((CoffeeMachine)device).StartBrewing();
-                    ((CoffeeMachine)device).StopBrewing();
+                    ((CoffeeMachine_old)device).StartBrewing();
+                    ((CoffeeMachine_old)device).StopBrewing();
                 }
             }
         }
@@ -73,26 +73,26 @@ namespace SmartHome
                 // 1. Kontrollera vilken typ device är.
                 // 2. Casta till rätt typ.
                 // 3. Anropa rätt energimetod.
-                if (device is Washer)
+                if (device is Washer_old)
                 {
-                    ((Washer)device).PrintWashEnergy();
+                    ((Washer_old)device).PrintWashEnergy();
                 }
-                else if (device is Refrigerator)
+                else if (device is Refrigerator_old)
                 {
-                    ((Refrigerator)device).PrintCoolingEnergy();
+                    ((Refrigerator_old)device).PrintCoolingEnergy();
 
                 }
-                else if (device is Oven)
+                else if (device is Oven_old)
                 {
-                    ((Oven)device).PrintHeatingEnergy();
+                    ((Oven_old)device).PrintHeatingEnergy();
                 }
-                else if (device is RobotVacuum)
+                else if (device is RobotVacuum_old)
                 {
-                    ((RobotVacuum)device).PrintCleaningEnergy();
+                    ((RobotVacuum_old)device).PrintCleaningEnergy();
                 }
-                else if (device is CoffeeMachine)
+                else if (device is CoffeeMachine_old)
                 {
-                    ((CoffeeMachine)device).PrintBrewingEnergy();
+                    ((CoffeeMachine_old)device).PrintBrewingEnergy();
                 }
             }
         }

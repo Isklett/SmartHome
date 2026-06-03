@@ -1,30 +1,33 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace SmartHome.Appliances
 {
-    internal class Oven
+    internal class Oven : Appliance
     {
-        public string? Brand { get; set; }
         public float MaxTemperature { get; set; }
-
-        public Oven(string brand, float maxTemperature)
+        public Oven(string brand, string room, float maxTemperature) : base(brand, room)
         {
-            Brand = brand;
             MaxTemperature = maxTemperature;
         }
-
-        public void StartHeating()
+        public override string GetInfo()
         {
-            Console.WriteLine($"{Brand} oven starts heating.");
+            return $"{base.GetInfo()} Max temperature: {MaxTemperature} degrees.";
         }
-
-        public void StopHeating()
+        public override void TurnOn()
         {
-            Console.WriteLine($"{Brand} oven stops heating.");
+            base.TurnOn();
+            Console.WriteLine($"{Brand} oven has started heating.");
         }
-
-        public void PrintHeatingEnergy()
+        public override void TurnOff()
         {
-            Console.WriteLine($"{Brand} oven uses 2.5 kWh per hour of heating.");
+            base.TurnOff();
+            Console.WriteLine($"{Brand} oven has stopped heating and is now cooling down.");
+        }
+        public override double GetDailyEnergyUsage()
+        {
+            return 1.2; // kWh per wash
         }
     }
 }
