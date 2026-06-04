@@ -1,10 +1,7 @@
 ﻿
-
-using SmartHome.Interfaces;
-
 namespace SmartHome.Appliances
 {
-    internal class RobotVacuum : Appliance, ISchedulable
+    internal class Speaker : Appliance
     {
         public float BatteryLevel
         {
@@ -14,12 +11,18 @@ namespace SmartHome.Appliances
                 field = Math.Clamp(value, 0.0f, 100.0f);
             }
         }
-
-        public DateTime NextRun { get; set; }
-
-        public RobotVacuum(string brand, string room, float batteryLevel) : base(brand, room)
+        public int VolumeLevel
+        {
+            get;
+            set
+            {
+                field = Math.Clamp(value, 0, 20);
+            }
+        }
+        public Speaker(string brand, string room, float batteryLevel, int volumeLevel) : base(brand, room)
         {
             BatteryLevel = batteryLevel;
+            VolumeLevel = volumeLevel;
         }
         public override string GetInfo()
         {
@@ -28,21 +31,16 @@ namespace SmartHome.Appliances
         public override void TurnOn()
         {
             base.TurnOn();
-            Console.WriteLine($"{Brand} vacuum starts cleaning.");
+            Console.WriteLine($"{Brand} speaker has started, you can now connect.");
         }
         public override void TurnOff()
         {
             base.TurnOff();
-            Console.WriteLine($"{Brand} vacuum stops cleaning.");
+            Console.WriteLine($"{Brand} speaker has turned off.");
         }
         public override double GetDailyEnergyUsage()
         {
-            return 0.4; // kWh per day
-        }
-
-        public void Schedule(DateTime time)
-        {
-            Console.WriteLine($"{Brand} vacuum has been scheduled to start at {time}");
+            return 0.1; // kWh per day
         }
     }
 }

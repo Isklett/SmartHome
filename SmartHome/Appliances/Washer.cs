@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+
+using SmartHome.Interfaces;
 
 namespace SmartHome.Appliances
 {
-    internal class Washer : Appliance
+    internal class Washer : Appliance, ISchedulable
     {
         public float CapacityKg { get; }
+        public DateTime NextRun { get; set; }
+
         public Washer(string brand, string room, float capacityKg) : base(brand, room)
         {
             CapacityKg = capacityKg;
@@ -28,6 +30,11 @@ namespace SmartHome.Appliances
         public override double GetDailyEnergyUsage()
         {
             return 1.2; // kWh per wash
+        }
+
+        public void Schedule(DateTime time)
+        {
+            Console.WriteLine($"{Brand} washer has been scheduled to start at {time}");
         }
     }
 }

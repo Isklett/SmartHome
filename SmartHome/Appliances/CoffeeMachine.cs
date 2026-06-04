@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+
+using SmartHome.Interfaces;
 
 namespace SmartHome.Appliances
 {
-    internal class CoffeeMachine : Appliance
+    internal class CoffeeMachine : Appliance, ISchedulable
     {
         public float CupsPerBrew { get; set; }
+        public DateTime NextRun { get; set; }
 
         public CoffeeMachine(string brand, string room, float cupsPerBrew) : base(brand, room)
         {
@@ -28,7 +29,12 @@ namespace SmartHome.Appliances
         }
         public override double GetDailyEnergyUsage()
         {
-            return 1.2; // kWh per wash
+            return 0.3; // kWh per day
+        }
+
+        public void Schedule(DateTime time)
+        {
+            Console.WriteLine($"{Brand} coffee machine has been scheduled to start at {time}");
         }
     }
 }

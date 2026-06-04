@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "I:\\Lexicon\\C# Projects\\SmartHome\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\appliances\\coffeemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\appliances\\coffeemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\appliances\\oven.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\appliances\\oven.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\appliances\\refrigerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\appliances\\refrigerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\appliances\\washer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\appliances\\washer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\appliances\\robotvacuum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\appliances\\robotvacuum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\appliances\\appliance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\appliances\\appliance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\smarthomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\smarthomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|i:\\lexicon\\c# projects\\smarthome\\smarthome\\interfaces\\ischedulable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{562B3F45-5B8B-631D-344D-9716FFF395A6}|SmartHome\\SmartHome.csproj|solutionrelative:smarthome\\interfaces\\ischedulable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,95 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CoffeeMachine.cs",
-              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\CoffeeMachine.cs",
-              "RelativeDocumentMoniker": "SmartHome\\Appliances\\CoffeeMachine.cs",
-              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\CoffeeMachine.cs",
-              "RelativeToolTip": "SmartHome\\Appliances\\CoffeeMachine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABOAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ISchedulable.cs",
+              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Interfaces\\ISchedulable.cs",
+              "RelativeDocumentMoniker": "SmartHome\\Interfaces\\ISchedulable.cs",
+              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Interfaces\\ISchedulable.cs",
+              "RelativeToolTip": "SmartHome\\Interfaces\\ISchedulable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T14:33:09.921Z",
+              "WhenOpened": "2026-06-04T14:14:37.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Oven.cs",
-              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Oven.cs",
-              "RelativeDocumentMoniker": "SmartHome\\Appliances\\Oven.cs",
-              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Oven.cs",
-              "RelativeToolTip": "SmartHome\\Appliances\\Oven.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABEAAAAAAAAAA==",
+              "Title": "SmartHomeController.cs",
+              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\SmartHomeController.cs",
+              "RelativeDocumentMoniker": "SmartHome\\SmartHomeController.cs",
+              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\SmartHomeController.cs",
+              "RelativeToolTip": "SmartHome\\SmartHomeController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAcwEIAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T14:23:21.957Z",
+              "WhenOpened": "2026-06-04T08:07:05.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Refrigerator.cs",
-              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Refrigerator.cs",
-              "RelativeDocumentMoniker": "SmartHome\\Appliances\\Refrigerator.cs",
-              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Refrigerator.cs",
-              "RelativeToolTip": "SmartHome\\Appliances\\Refrigerator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T14:16:30.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Washer.cs",
-              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Washer.cs",
-              "RelativeDocumentMoniker": "SmartHome\\Appliances\\Washer.cs",
-              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Washer.cs",
-              "RelativeToolTip": "SmartHome\\Appliances\\Washer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T13:39:38.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RobotVacuum.cs",
-              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\RobotVacuum.cs",
-              "RelativeDocumentMoniker": "SmartHome\\Appliances\\RobotVacuum.cs",
-              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\RobotVacuum.cs",
-              "RelativeToolTip": "SmartHome\\Appliances\\RobotVacuum.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T14:08:33.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Appliance.cs",
-              "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Appliance.cs",
-              "RelativeDocumentMoniker": "SmartHome\\Appliances\\Appliance.cs",
-              "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Appliances\\Appliance.cs",
-              "RelativeToolTip": "SmartHome\\Appliances\\Appliance.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA6wB4AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T13:13:31.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Program.cs",
               "RelativeDocumentMoniker": "SmartHome\\Program.cs",
               "ToolTip": "I:\\Lexicon\\C# Projects\\SmartHome\\SmartHome\\Program.cs",
               "RelativeToolTip": "SmartHome\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwG8AAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAAK4AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T13:37:46.26Z",
               "EditorCaption": ""

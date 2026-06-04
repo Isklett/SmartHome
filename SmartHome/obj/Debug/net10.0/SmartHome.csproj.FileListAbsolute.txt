@@ -12,3 +12,4 @@ I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\refint\SmartHome.dl
 I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.pdb
 I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.genruntimeconfig.cache
 I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\ref\SmartHome.dll
+I:\Lexicon\C# Projects\SmartHome\SmartHome\obj\Debug\net10.0\SmartHome.sourcelink.json

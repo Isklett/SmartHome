@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace SmartHome.Appliances
 {
@@ -27,7 +25,7 @@ namespace SmartHome.Appliances
         }
         public override double GetDailyEnergyUsage()
         {
-            return 1.2; // kWh per wash
+            return 2.5; // kWh per day
         }
     }
 }

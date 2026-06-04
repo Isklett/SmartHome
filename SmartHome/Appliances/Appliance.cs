@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace SmartHome.Appliances
 {
@@ -28,14 +26,14 @@ namespace SmartHome.Appliances
             // Sätt IsOn till true.
             // Skriv ut ett generellt startmeddelande.
             IsOn = true;
-            Console.WriteLine($"{this} has turned on.");
+            Console.WriteLine($"{GetType().Name} has turned on.");
         }
         public virtual void TurnOff()
         {
             // Sätt IsOn till false.
             // Skriv ut ett generellt stoppmeddelande.
             IsOn = false;
-            Console.WriteLine($"{this} has turned off.");
+            Console.WriteLine($"{GetType().Name} has turned off.");
         }
         public virtual double GetDailyEnergyUsage()
         {
