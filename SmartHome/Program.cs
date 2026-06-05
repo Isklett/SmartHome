@@ -1,4 +1,6 @@
 ﻿using SmartHome.Appliances;
+using SmartHome.Interfaces;
+using System.Reflection;
 
 namespace SmartHome
 {
@@ -27,6 +29,7 @@ namespace SmartHome
             RobotVacuum robotVacuum = new RobotVacuum("Xiaomi", "Living Room", 100.0f);
             CoffeeMachine coffeeMachine = new CoffeeMachine("Nespresso", "Kitchen", 2);
             Speaker speaker = new Speaker("Sonos", "Living Room", 100.0f, 10);
+            AirConditioner airConditioner = new AirConditioner("Electrolux", "Bedroom", 3.5f);
 
             devices.Add(washer);
             devices.Add(refrigerator);
@@ -48,6 +51,7 @@ namespace SmartHome
             controller.AddDevice(robotVacuum);
             controller.AddDevice(coffeeMachine);
             controller.AddDevice(speaker);
+            controller.AddDevice(airConditioner);
 
             controller.PrintStatusReport();
             Console.WriteLine();
@@ -59,6 +63,34 @@ namespace SmartHome
             controller.TurnOffAll();
             Console.WriteLine();
             controller.ScheduleAllSchedulableDevices(DateTime.Now.AddHours(2));
+
+            Console.WriteLine();
+            SmartLamp lamp1 = new SmartLamp("IKEA", "Hallway", 80);
+            Appliance lamp2 = lamp1;
+            lamp1.TurnOn();
+            lamp2.TurnOn();
+
+            Console.WriteLine();
+            List<ISchedulable> schedulableDevices = controller.GetSchedulableDevices();
+            foreach (ISchedulable schedulable in schedulableDevices)
+            {
+                // Skriv ut NextRun eller schemalägg apparaten.
+                schedulable.Schedule(DateTime.Now.AddHours(1));
+            }
+
+            Console.WriteLine();
+            Appliance? foundDevice = controller.FindDeviceByBrand("Electrolux");
+            if (foundDevice != null)
+            {
+                if(foundDevice is ISchedulable iSchedulableDevice)
+                {
+                    iSchedulableDevice.Schedule(DateTime.Now.AddHours(3));
+                }
+                else
+                {
+                    foundDevice.TurnOn();
+                }
+            }
         }
         static void RunMorningRoutine(List<object> devices)
         {
@@ -175,6 +207,33 @@ namespace SmartHome
             //15.Vad är skillnaden mellan arv och interface i det här exemplet?
             Console.WriteLine("Svar 15: Att en klass ärver från en annan betyder att det är en specialisering av den ärvda basklassen. Klassen har tillgång till den ärvda basklassen, samt att den kan overridea och specialisera dens metoder. Ett interface säger till klassen vad den behöver implementera, men klassen måste alltid implementera funktionaliteten själv. Så i detta fall säger arvet till vad för typ av klass det är och vad för grundfunktionalitet den ska ha, medans interface säger till vad för metoder och variabler som måste implementeras, men inte hur.");
 
+            //16.Vad händer om man tar bort virtual från en metod i basklassen?
+            Console.WriteLine("Svar 16: 'Subklass.TurnOn()': cannot override inherited member 'Appliance.TurnOn()' because it is not marked virtual, abstract, or override");
+            //17.Vad händer om man tar bort override från en metod i subklassen?
+            Console.WriteLine("Svar 17:  Varning. C# föreslår att jag ska lägga till override keyword för att få subklassen att overridea.");
+
+            //18.Blir utskriften samma eller olika när vi anropar TurnOn() på lamp1 och lamp2?
+            Console.WriteLine("Svar 18: Nej, lamp1 skriver ut brand medans lamp2 skriver ut generiska metoden.");
+            //19.Vilken metod körs när variabeln har typen SmartLamp?
+            Console.WriteLine("Svar 19: Metoden som ligger i SmartLamp-klassen.");
+            //20.Vilken metod körs när variabeln har typen Appliance?
+            Console.WriteLine("Svar 20: Den generiska metoden i basklassen.");
+            //21.Varför är detta farligt eller förvirrande?
+            Console.WriteLine("Svar 21: Det ger inget felmeddelande då SmartLamp är en appliance, så vi kan använda en referens av typen appliance till den utan att den säger till. Om vi då anropar en appliance-metod som inte finns som override i subklassen, kommer basklassens metod köras. Om vi däremot anropar SmartLamp direkt så kommer metoden i subklassen köras då 'new' betyder att vi gömmer basklassens metod med samma signatur.");
+            //22.Vad händer om du byter new till override?
+            Console.WriteLine("Svar 22: Om vi byter new till override kommer subklassens metod alltid köras om Appliance-objektet är av rätt typ. Detta då override betyder att vi ersätter basklassens metod med subklassens.");
+
+            //23.Vad säger kompilatorn?
+            Console.WriteLine("Svar 23: 'PizzaOven.TurnOn()': cannot override inherited member 'Oven.TurnOn()' because it is sealed");
+            //24.Varför får PizzaOven inte override:a TurnOn()?
+            Console.WriteLine("Svar 24: Sealed hindrar arv. Så om en metod är sealed kan ingen ärva den metoden, och om en klass är sealed kan ingen ärva den klassen.");
+            //25. När kan det vara rimligt att använda sealed override?
+            Console.WriteLine("Svar 25: När du anser att en metod behövs specialiseras för en subklass men är komplett efter det och inte ska ha möjligheten att overrideas av subklasser längre ner i strukturen.");
+            //26. Vad kan PizzaOven fortfarande göra i stället? Kan den override:a någon annan metod?
+            Console.WriteLine("Svar 26: Ja, resterande metoder som inte är sealed går att overrideas");
+
+            //27.Varför kan listan vara List<ISchedulable> även om objekten egentligen är olika klasser?
+            Console.WriteLine("Svar 27: En lista är bara referenser, och i detta fallet är det en lista av referenser till objekt av klasser som implementerar interfacet ISchedulable.");
 
         }
     }

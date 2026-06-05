@@ -13,7 +13,7 @@ namespace SmartHome.Appliances
         {
             return $"{base.GetInfo()} Max temperature: {MaxTemperature} degrees.";
         }
-        public override void TurnOn()
+        public sealed override void TurnOn()
         {
             base.TurnOn();
             Console.WriteLine($"{Brand} oven has started heating.");

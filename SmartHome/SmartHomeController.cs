@@ -71,5 +71,29 @@ namespace SmartHome
             }
         }
 
+        internal List<ISchedulable> GetSchedulableDevices()
+        {
+            List<ISchedulable> result = new List<ISchedulable>();
+            foreach (Appliance device in _devices)
+            {
+                // Om device implementerar ISchedulable,
+                // lägg till det i result.
+                if(device is ISchedulable schedulableDevice)
+                {
+                    result.Add(schedulableDevice);
+                }
+            }
+            return result;
+        }
+
+        public Appliance? FindDeviceByBrand(string brand)
+        {
+            // Returnera första apparaten med rätt brand.
+            // Om ingen finns kan du returnera null,
+            // eller kasta ett eget felmeddelande.
+            return _devices.FirstOrDefault(d => d.Brand.Equals(brand, StringComparison.OrdinalIgnoreCase));
+        }
+
+
     }
 }
